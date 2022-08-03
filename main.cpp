@@ -42,6 +42,7 @@ enum FeederErrors
 static void die(FeederErrors err, const char* why)
 {
     printf("%s\n", why);
+    getchar();
     while (0xA != getchar());
     exit(err);
 }
