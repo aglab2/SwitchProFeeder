@@ -10,9 +10,7 @@ namespace SwitchPro
 #pragma pack(push, 1)
     struct Controller
     {
-        uint8_t Header[8];
-        uint8_t _Padding0[4];
-
+        uint8_t _Padding0[2];
         union
         {
             uint32_t Buttons;

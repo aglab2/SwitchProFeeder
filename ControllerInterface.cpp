@@ -23,8 +23,16 @@ namespace ControllerInterface
 
         float X = fabs(x);
         float Y = fabs(y);
+        float maxMultiplier = 0;
         if (Y > X)
+        {
+            maxMultiplier = 1.f / Y;
             std::swap(X, Y);
+        }
+        else
+        {
+            maxMultiplier = 1.f / X;
+        }
 
         float fromAvg = X + fromSlope_ * Y;
         float toAvg = X + toSlope_ * Y;
@@ -34,6 +42,7 @@ namespace ControllerInterface
         float dampening = pow(fromAvg, power_);
 
         float multiplier = 1 + addition * dampening;
+        multiplier = multiplier > maxMultiplier ? maxMultiplier : multiplier;
 
         x *= multiplier;
         y *= multiplier;
