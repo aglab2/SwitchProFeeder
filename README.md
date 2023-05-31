@@ -15,7 +15,7 @@ This Feeder was inspired by the ProconXInput implementation by MTCKC and uses th
 
 # How to install and run?
 * Install ViGEm Driver https://github.com/ViGEm/ViGEmBus/releases. Make sure to follow extra instructions on Windows 7.
-* Download the feeder from https://github.com/aglab2/SwitchProFeeder/releases/download/0.2/SwitchProFeeder.zip
+* Download the feeder from https://github.com/aglab2/SwitchProFeeder/releases/download/1.0/SwitchProFeeder.zip
 * Run the executable with and pick mapping.yaml config
 * If 'Feeder is running!' appeared, the program has successfully started!
 * Enjoy!
